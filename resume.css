@@ -1,0 +1,46 @@
+body {
+  widows: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0; }
+  body #hey {
+    width: 50%;
+    height: auto;
+    -webkit-animation-name: colorful;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-play-state: running; }
+  body #fuck {
+    width: 50%;
+    height: auto;
+    -webkit-animation-name: rainbow;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-play-state: running; }
+
+@keyframes colorful {
+  0% {
+    color: black; }
+  100% {
+    color: red; } }
+@keyframes rainbow {
+  0% {
+    color: blue; }
+  20% {
+    color: yellow; }
+  40% {
+    color: red; }
+  60% {
+    color: purple; }
+  80% {
+    color: orange; }
+  100% {
+    color: green; } }
+
+/*# sourceMappingURL=resume.css.map */
