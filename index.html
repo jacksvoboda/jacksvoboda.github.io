@@ -5,10 +5,181 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Wagner The Fagner</title>
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Arvo|Poppins|Montserrat|Open+Sans+Condensed:300|Amatic+SC|Merriweather" rel="stylesheet">
     <link rel='stylesheet' href='resume.css'>
 </head>
-<body>
-    <div id='hey'><h1>Hey Wagner</h1></div>
-    <div id='fuck'><h1>Fuck your mum</h1></div>
+<body onload='setParallaxImgDist();'>
+    
+    <!--a sticky button that returns the user to the top of the page-->
+    <a id='stickyNav' href='#homeAnchor'><div class='arrow'></div></a>
+
+<!--Start intro container holding intro page. Should take the user's entire screen-->
+
+    <div id='introContainer'>
+        <a name='homeAnchor'></a><!--anchor has to go here for some reason, doesn nothing if it sits in the body above this element-->
+        <div id='name'><h1>Jack Svoboda</h1></div>
+        <div id='tab' onclick='openNav()'><div id='arrow'></div></div><!--clicking on "tab" should bring up the nav menu-->
+        <div id='nav'><!--nav Items will activate the rest of the page, and snap scroll to respective anchor points-->
+            <div class='navItem' id='researchLink'><a href='#researchAnchor'>Research</a></div>
+            <div class='navItem' id='webDesignLink'><a href='#webDesignAnchor'>Web Design</a></div>
+            <div class='navItem' id='educaitonLink'><a href='#educationAnchor'>Education</a></div>
+            <div class='navItem' id='contactLink'><a href='#footerAnchor'>Contact</a></div>
+        </div>
+    </div>
+
+<!--end intro container-->
+
+    <div id='sideNav'></div><!--sticky navbar with 'contact', personal statement, ed, webdev, research etc.-->
+
+<!--Images-->
+
+<div class='bannerImg' id='researchImage'></div><!--Image in the background for parralax-->
+<div class='bannerImg' id='webDesignImage'></div>
+<div class='bannerImg' id='educationImage'></div>
+
+<!--start main content container-->
+
+    <div id='mainContentContainer'>
+        <!--the anchor point for the nav links-->
+        <a name='researchAnchor'></a>
+        <!--the transparent title bar that holds the labeling title-->
+        <div id='researchTitleBar' class='titleBar'><h1>Research</h1></div>
+        <!--the description section between titles-->
+        <div class='description'>
+            <div class='text'>
+                <p>
+                    Duis a libero vestibulum mauris sodales iaculis. Proin sagittis justo faucibus turpis pretium, id ornare neque fringilla. 
+                    In hac habitasse platea dictumst. Curabitur luctus eu augue sed placerat. Vivamus tristique tempor lectus, ac sodales felis auctor at. In sollicitudin blandit odio.
+                </p>
+                <p>
+                    Sed elementum neque quis sem convallis ullamcorper. Duis a libero vestibulum mauris sodales iaculis. In efficitur nibh eu dapibus pharetra. 
+                    Praesent luctus finibus massa id ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique tempus convallis.
+                    Praesent luctus finibus massa id ultricies. Ut eget sem vitae risus lacinia auctor at eu lectus. 
+                    Pellentesque ornare sem ac euismod varius.
+                </p>
+            </div>
+            <div class='divider'></div>
+            <div class='text'>
+                <p>
+                    Morbi suscipit magna eget nunc ornare tristique. Donec sagittis nibh sit amet lorem commodo finibus. In accumsan placerat ante ut faucibus. 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique tempus convallis. Proin ac eros a turpis consequat fermentum. 
+                    Integer eros tortor, bibendum eget ornare a, malesuada eget est. Proin sed vulputate ipsum, a lacinia leo. Praesent tincidunt rhoncus condimentum. 
+                    Praesent luctus finibus massa id ultricies. Donec at risus eget ante scelerisque vestibulum. Pellentesque metus dolor, dictum non auctor at, posuere et leo. 
+                    Aenean commodo vitae risus vitae pulvinar. Curabitur ut massa iaculis, gravida neque id, malesuada velit. Donec bibendum magna id blandit tempor. 
+                    Ut non gravida purus.
+                </p>
+            </div>
+        </div>
+        <a name='webDesignAnchor'></a>
+        <div id='webDesignTitleBar' class='titleBar'><h1>Web Design</h1></div>
+        <div class='description'>
+            <div class='text'>
+                Duis a libero vestibulum mauris sodales iaculis. Proin sagittis justo faucibus turpis pretium, id ornare neque fringilla. 
+                In hac habitasse platea dictumst. Curabitur luctus eu augue sed placerat. Vivamus tristique tempor lectus, ac sodales felis auctor at. In sollicitudin blandit odio. 
+                Sed elementum neque quis sem convallis ullamcorper. In efficitur nibh eu dapibus pharetra. Ut eget sem vitae risus lacinia auctor at eu lectus. 
+                Pellentesque ornare sem ac euismod varius.
+            </div>
+            <div class='divider'></div>
+            <div class='text'>
+                Morbi suscipit magna eget nunc ornare tristique. Donec sagittis nibh sit amet lorem commodo finibus. In accumsan placerat ante ut faucibus. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique tempus convallis. Proin ac eros a turpis consequat fermentum. 
+                Integer eros tortor, bibendum eget ornare a, malesuada eget est. Proin sed vulputate ipsum, a lacinia leo. Praesent tincidunt rhoncus condimentum. 
+                Praesent luctus finibus massa id ultricies. Donec at risus eget ante scelerisque vestibulum. Pellentesque metus dolor, dictum non auctor at, posuere et leo. 
+                Aenean commodo vitae risus vitae pulvinar. Curabitur ut massa iaculis, gravida neque id, malesuada velit. Donec bibendum magna id blandit tempor. 
+                Ut non gravida purus.
+            </div>
+        </div>
+        <a name='educationAnchor'></a>
+        <div id='educationTitleBar' class='titleBar'><h1>Education</h1></div>
+        <div class='description' id='educationDesc'><!--this one has an ID where the others don't because it needs a unique bottom border to flow better with the visuals in the contact section-->
+            <div class='text'>
+                <p>
+                    Duis a libero vestibulum mauris sodales iaculis. Proin sagittis justo faucibus turpis pretium, id ornare neque fringilla. 
+                    In hac habitasse platea dictumst. Curabitur luctus eu augue sed placerat. Vivamus tristique tempor lectus, ac sodales felis auctor at. 
+                    In sollicitudin blandit odio.
+                </p>
+                <p>
+                    Sed elementum neque quis sem convallis ullamcorper. Duis a libero vestibulum mauris sodales iaculis. In efficitur nibh eu dapibus pharetra. 
+                    Praesent luctus finibus massa id ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique tempus convallis.
+                    Praesent luctus finibus massa id ultricies. Ut eget sem vitae risus lacinia auctor at eu lectus. 
+                    Pellentesque ornare sem ac euismod varius.
+                </p>
+            </div>
+            <div class='divider'></div>
+            <div class='text'>
+                Morbi suscipit magna eget nunc ornare tristique. Donec sagittis nibh sit amet lorem commodo finibus. In accumsan placerat ante ut faucibus. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique tempus convallis. Proin ac eros a turpis consequat fermentum. 
+                Integer eros tortor, bibendum eget ornare a, malesuada eget est. Proin sed vulputate ipsum, a lacinia leo. Praesent tincidunt rhoncus condimentum. 
+                Praesent luctus finibus massa id ultricies. Donec at risus eget ante scelerisque vestibulum. Pellentesque metus dolor, dictum non auctor at, posuere et leo. 
+                Aenean commodo vitae risus vitae pulvinar. Curabitur ut massa iaculis, gravida neque id, malesuada velit. Donec bibendum magna id blandit tempor. 
+                Ut non gravida purus.
+            </div>
+        </div>
+        <a name='footerAnchor'></a>
+        <div id='footer'>
+            <div id='contactContainer'>
+                <div id='phoneNumber'>
+                    <div id='iPhoneIcon'></div>
+                    <a>312-123-4567</a>
+                </div>
+                <div id='email'>
+                    <div id='mailIcon'></div>
+                    <p>jackdanielsvoboda@gmail.com</p>
+                </div>
+            </div>
+            <div id='contactForm'>
+                <p>Contact Me</p>
+                <form>
+                    <input type='text' name='name' id='fullName' autocomplete='off' placeholder='Full Name'>
+                    <br/>
+                    <input type='text' name='email' id='emailAddress' autocomplete='off' placeholder='Email Address'>
+                    <br/>
+                    <input type='text' name='message' id='userMessage' autocomplete='off' placeholder='What can I help you with?'>
+                    <br/>
+                    <input type='submit' value='Send'>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
+
+<script>
+function openNav(){
+    document.getElementById('nav').style.transform = 'translateY(-25vh)';
+    document.getElementById('name').style.transform = 'translateY(-25vh)';
+    document.getElementById('name').style.color = '#7acfd6';
+    document.body.style.overflowY = 'scroll';
+}
+//window.addEventListener('scroll', parallax);
+window.addEventListener('resize', setParallaxImgDist);//every time the window is resized, this listener triggers the funciton to check the location of the image revealing banner
+parallaxCheck = setInterval(parallax, 10);
+var parallaxWDImgDist = 0;//declare variable outside the scope of any funciton so that it is universal
+var parallaxEdImgDist = 0;
+function setParallaxImgDist(){
+    let windowHeight = window.innerHeight;
+    //the below variable is the distance between the top of the banner in question and the top of the page, in pixels
+    let webDesignBar = (document.getElementById('webDesignTitleBar').getBoundingClientRect()).top;
+    let educationBar = (document.getElementById('educationTitleBar').getBoundingClientRect()).top;
+    //this guy finds the distance between viewport top and body top
+    let viewportToBodyPX = window.pageYOffset;
+    //these equations convert pixel into vh units
+    let viewportToWDBannerTop = (100*webDesignBar/windowHeight);//distance from top of web design banner to top of viewport
+    let viewportToEdBannerTop = (100*educationBar/windowHeight);//distance from top of education banner to top of viewport
+    let viewportToBodyTop = (100*viewportToBodyPX/windowHeight)//distance from top of viewport to top of body
+    //the following should be the distance between the webdesign banner and the top of the body in viewport height units
+    parallaxWDImgDist = (viewportToWDBannerTop + viewportToBodyTop);
+    parallaxEdImgDist = (viewportToEdBannerTop + viewportToBodyTop);
+}
+function parallax(){
+    let scrolled = window.pageYOffset;
+    let researchImg = document.getElementById('researchImage');
+    let webDesignImg = document.getElementById('webDesignImage');
+    let educationImg = document.getElementById('educationImage');
+    researchImg.style.top = 45 + (scrolled * 0.015) + 'vh'; //this one doesn't need to be responsive because the first image is underneath the title page, whose height is constant
+    
+    webDesignImg.style.top = (parallaxWDImgDist - 70 + (scrolled * 0.015)).toFixed(2) + 'vh';
+    educationImg.style.top = (parallaxEdImgDist - 80 + (scrolled * 0.015)).toFixed(2) + 'vh';
+    //console.log(parallaxImgDist);
+}
+</script>
 </html>
