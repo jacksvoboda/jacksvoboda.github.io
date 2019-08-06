@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id='html' lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -149,7 +149,8 @@ function openNav(){
     document.getElementById('nav').style.display = 'flex';
     document.getElementById('name').style.transform = 'translateY(-25vh)';
     document.getElementById('name').style.color = '#7acfd6';
-    document.body.style.overflowY = 'scroll';
+    document.getElementById('html').style.overflowY = 'scroll';
+    //document.body.style.overflowY = 'scroll';
 }
 
 window.addEventListener('resize', setParallaxImgDist);//every time the window is resized, this listener triggers the funciton to check the location of the image revealing banner
