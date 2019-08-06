@@ -43,20 +43,23 @@ body {
     background-position: center;
     z-index: 5; }
     body #introContainer #name {
-      font-family: Arvo;
       font-weight: normal;
       height: 100%;
+      position: relative;
       display: flex;
+      color: #e0474c;
       transition: 0.5s ease-in-out;
-      color: #e0474c; }
+      font-family: Arvo; }
       body #introContainer #name h1 {
         margin: auto;
-        font-size: 5vw;
+        font-size: calc(40px + (30) * (100vw - 768px) / (1920 - 768));
         letter-spacing: 1vw;
         font-weight: normal; }
     body #introContainer #tab {
-      width: 10vw;
+      width: 12vw;
+      min-width: 150px;
       height: 8vh;
+      min-height: 80px;
       border-radius: 5px;
       position: absolute;
       bottom: 0;
@@ -69,15 +72,17 @@ body {
       opacity: 0.5;
       cursor: pointer; }
       body #introContainer #tab #arrow {
-        width: 2vw;
-        height: 2vw;
+        width: 3vw;
+        min-width: 40px;
+        height: 3vw;
+        min-height: 40px;
         border-left: 0.1vw solid rgba(255, 255, 255, 0.6);
         border-top: 0.1vw solid rgba(255, 255, 255, 0.6);
         transform: rotate(45deg);
         position: relative;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 3.5vh; }
+        margin-top: 4vh; }
     body #introContainer #nav {
       width: 100vw;
       height: 25vh;
@@ -93,23 +98,23 @@ body {
       justify-content: center;
       transition: 0.5s ease-in-out;
       font-family: poppins;
-      font-size: 1.8vw;
+      font-size: calc(22px + (10) * (100vw - 768px) / (1920 - 768));
       font-weight: normal; }
       body #introContainer #nav .navItem {
         flex: 1;
         height: 100%;
-        display: flex; }
-        body #introContainer #nav .navItem a {
-          margin: auto;
+        display: flex;
+        text-decoration: none;
+        transition: 0.5s ease-in-out; }
+        body #introContainer #nav .navItem :visited {
           color: #224550;
-          text-decoration: none;
-          transition: 0.5s ease-in-out; }
-          body #introContainer #nav .navItem a:hover {
-            transition: 0.1s ease-in-out;
-            transform: translateY(-0.5vh); }
-          body #introContainer #nav .navItem a :visited {
-            color: #224550;
-            text-decoration: none; }
+          text-decoration: none; }
+        body #introContainer #nav .navItem:hover {
+          transition: 0.1s ease-in-out;
+          transform: translateY(-0.5vh); }
+        body #introContainer #nav .navItem div {
+          margin: auto;
+          color: #224550; }
   body #mainContentContainer {
     width: 100vw;
     height: auto;
@@ -155,7 +160,7 @@ body {
         padding: 5vw;
         margin: auto;
         flex: 1;
-        font-size: calc(14px + (6) * (100vw - 768px) / (1920 - 768));
+        font-size: calc(18px + (6) * (100vw - 768px) / (1920 - 768));
         text-indent: 5vw;
         background-color: #ffffff; }
       body #mainContentContainer .description .divider {
@@ -175,7 +180,7 @@ body {
       background-color: white;
       font-family: open sans condensed; }
       body #mainContentContainer #footer #contactContainer {
-        font-size: calc(12px + (10) * (100vw - 768px) / (1920 - 768));
+        font-size: calc(18px + (5) * (100vw - 768px) / (1920 - 768));
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -210,10 +215,11 @@ body {
             height: 40px; }
       body #mainContentContainer #footer #contactForm p {
         margin-bottom: -5vh;
-        font-size: calc(20px + (10) * (100vw - 768px) / (1920 - 768));
+        font-size: calc(22px + (8) * (100vw - 768px) / (1920 - 768));
         font-family: fjalla one; }
       body #mainContentContainer #footer #contactForm form input[type=text] {
         width: 20vw;
+        min-width: 250px;
         border: none;
         border-bottom: 1px solid #c5c5c5;
         padding: 10px;
@@ -221,7 +227,8 @@ body {
         font-family: open sans condensed;
         font-size: calc(15px + (10) * (100vw - 768px) / (1920 - 768)); }
         body #mainContentContainer #footer #contactForm form input[type=text]::placeholder {
-          color: #b9b9b9; }
+          color: #b9b9b9;
+          font-size: calc(20px + (5) * (100vw - 768px) / (1920 - 768)); }
         body #mainContentContainer #footer #contactForm form input[type=text]:focus {
           outline: none;
           border-bottom: 1px solid gray; }
@@ -252,5 +259,52 @@ body {
     background-position: center;
     position: absolute;
     z-index: -100; }
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-y: hidden; }
+    body #stickyNav {
+      display: none; }
+    body #introContainer #name {
+      height: 75vh; }
+      body #introContainer #name h1 {
+        margin-top: 45vh !important; }
+    body #introContainer #nav {
+      height: 50vh;
+      display: none;
+      flex-wrap: wrap;
+      box-shadow: none; }
+      body #introContainer #nav .navItem {
+        flex: auto;
+        height: 25vh;
+        width: 40vw;
+        box-shadow: inset 0 0 20px -12px #8d8d8d; }
+        body #introContainer #nav .navItem:hover {
+          transform: translate(0, 0); }
+    body #introContainer #tab {
+      height: 15vh;
+      width: 20vw; }
+      body #introContainer #tab #arrow {
+        width: 8vw;
+        height: 8vw;
+        margin-top: 6vh; }
+    body #footer {
+      flex-direction: column; }
+      body #footer #contactContainer {
+        justify-content: center;
+        align-items: center; }
+        body #footer #contactContainer div#phoneNumber {
+          margin: 0 !important; }
+          body #footer #contactContainer div#phoneNumber div#iPhoneIcon {
+            margin-right: 0 !important;
+            transform: scale(0.8); }
+        body #footer #contactContainer div#email {
+          margin: 0 !important; }
+          body #footer #contactContainer div#email div#mailIcon {
+            margin: 0 !important;
+            transform: scale(0.8); }
+      body #footer #contactForm {
+        margin-left: 5vw;
+        margin-top: 10vh; } }
 
 /*# sourceMappingURL=resume.css.map */

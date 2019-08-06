@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="resume.css">
     <title>Jack Svoboda</title>
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Arvo|Poppins|Montserrat|Open+Sans+Condensed:300|Amatic+SC|Merriweather" rel="stylesheet">
-    <link rel='stylesheet' href='resume.css'>
 </head>
 <body onload='setParallaxImgDist();'>
     
@@ -20,10 +20,10 @@
         <div id='name'><h1>Jack Svoboda</h1></div>
         <div id='tab' onclick='openNav()'><div id='arrow'></div></div><!--clicking on "tab" should bring up the nav menu-->
         <div id='nav'><!--nav Items will activate the rest of the page, and snap scroll to respective anchor points-->
-            <div class='navItem' id='researchLink'><a href='#researchAnchor'>Research</a></div>
-            <div class='navItem' id='webDesignLink'><a href='#webDesignAnchor'>Web Design</a></div>
-            <div class='navItem' id='educaitonLink'><a href='#educationAnchor'>Education</a></div>
-            <div class='navItem' id='contactLink'><a href='#footerAnchor'>Contact</a></div>
+            <a href='#researchAnchor' class='navItem'><div>Research</div></a>
+            <a href='#webDesignAnchor' class='navItem'><div>Web Design</div></a>
+            <a href='#educationAnchor' class='navItem'><div>Education</div></a>
+            <a href='#footerAnchor' class='navItem'><div>Contact</div></a>
         </div>
     </div>
 
@@ -146,13 +146,14 @@
 <script>
 function openNav(){
     document.getElementById('nav').style.transform = 'translateY(-25vh)';
+    document.getElementById('nav').style.display = 'flex';
     document.getElementById('name').style.transform = 'translateY(-25vh)';
     document.getElementById('name').style.color = '#7acfd6';
     document.body.style.overflowY = 'scroll';
 }
-//window.addEventListener('scroll', parallax);
+
 window.addEventListener('resize', setParallaxImgDist);//every time the window is resized, this listener triggers the funciton to check the location of the image revealing banner
-parallaxCheck = setInterval(parallax, 10);
+parallaxCheck = setInterval(parallax, 5);
 var parallaxWDImgDist = 0;//declare variable outside the scope of any funciton so that it is universal
 var parallaxEdImgDist = 0;
 function setParallaxImgDist(){
@@ -176,7 +177,6 @@ function parallax(){
     let webDesignImg = document.getElementById('webDesignImage');
     let educationImg = document.getElementById('educationImage');
     researchImg.style.top = 45 + (scrolled * 0.015) + 'vh'; //this one doesn't need to be responsive because the first image is underneath the title page, whose height is constant
-    
     webDesignImg.style.top = (parallaxWDImgDist - 70 + (scrolled * 0.015)).toFixed(2) + 'vh';
     educationImg.style.top = (parallaxEdImgDist - 80 + (scrolled * 0.015)).toFixed(2) + 'vh';
     //console.log(parallaxImgDist);
