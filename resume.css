@@ -305,6 +305,9 @@ body {
             transform: scale(0.8); }
       body #footer #contactForm {
         margin-left: 5vw;
-        margin-top: 10vh; } }
+        margin-top: 10vh; }
+        body #footer #contactForm form input[type=text] {
+          border-bottom: none !important;
+          outline: 1px solid #dadada; } }
 
 /*# sourceMappingURL=resume.css.map */
