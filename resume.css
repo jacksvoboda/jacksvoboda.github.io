@@ -288,6 +288,10 @@ body {
         width: 8vw;
         height: 8vw;
         margin-top: 6vh; }
+    body #mainContentContainer .description {
+      flex-direction: column; }
+      body #mainContentContainer .description .divider {
+        display: none; }
     body #footer {
       flex-direction: column; }
       body #footer #contactContainer {
@@ -307,7 +311,6 @@ body {
         margin-left: 5vw;
         margin-top: 10vh; }
         body #footer #contactForm form input[type=text] {
-          border-bottom: none !important;
-          outline: 1px solid #dadada; } }
+          padding: 0 !important; } }
 
 /*# sourceMappingURL=resume.css.map */
