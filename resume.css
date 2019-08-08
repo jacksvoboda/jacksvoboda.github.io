@@ -220,12 +220,13 @@ body {
       body #mainContentContainer #footer #contactForm form input[type=text] {
         width: 20vw;
         min-width: 250px;
+        min-height: 60px;
         border: none;
         border-bottom: 1px solid #c5c5c5;
         padding: 10px;
         margin-top: 10vh;
         font-family: open sans condensed;
-        font-size: calc(15px + (10) * (100vw - 768px) / (1920 - 768)); }
+        font-size: calc(20px + (10) * (100vw - 768px) / (1920 - 768)); }
         body #mainContentContainer #footer #contactForm form input[type=text]::placeholder {
           color: #b9b9b9;
           font-size: calc(20px + (5) * (100vw - 768px) / (1920 - 768)); }
