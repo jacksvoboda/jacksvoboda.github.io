@@ -173,14 +173,20 @@ function setParallaxImgDist(){
     parallaxEdImgDist = (viewportToEdBannerTop + viewportToBodyTop);
 }
 function parallax(){
-    let scrolled = window.pageYOffset;
-    let researchImg = document.getElementById('researchImage');
-    let webDesignImg = document.getElementById('webDesignImage');
-    let educationImg = document.getElementById('educationImage');
-    researchImg.style.top = 45 + (scrolled * 0.015) + 'vh'; //this one doesn't need to be responsive because the first image is underneath the title page, whose height is constant
-    webDesignImg.style.top = (parallaxWDImgDist - 70 + (scrolled * 0.015)).toFixed(2) + 'vh';
-    educationImg.style.top = (parallaxEdImgDist - 80 + (scrolled * 0.015)).toFixed(2) + 'vh';
-    //console.log(parallaxImgDist);
+        let scrolled = window.pageYOffset;
+        let researchImg = document.getElementById('researchImage');
+        let webDesignImg = document.getElementById('webDesignImage');
+        let educationImg = document.getElementById('educationImage');
+    if(window.innerWidth > 768){
+        researchImg.style.top = 45 + (scrolled * 0.015) + 'vh'; //this one doesn't need to be responsive because the first image is underneath the title page, whose height is constant
+        webDesignImg.style.top = (parallaxWDImgDist - 70 + (scrolled * 0.015)).toFixed(2) + 'vh';
+        educationImg.style.top = (parallaxEdImgDist - 80 + (scrolled * 0.015)).toFixed(2) + 'vh';
+        //console.log(parallaxImgDist);
+    }else{
+        webDesignImg.style.top = parallaxWDImgDist.toFixed(2) - 20 + 'vh';
+        educationImg.style.top = parallaxEdImgDist.toFixed(2) - 20 + 'vh';
+        researchImg.style.top = 80 + 'vh';
+    }
 }
 </script>
 </html>

@@ -312,6 +312,21 @@ body {
         margin-left: 5vw;
         margin-top: 10vh; }
         body #footer #contactForm form input[type=text] {
-          padding: 0 !important; } }
+          padding: 0 !important; }
+    body #researchImage {
+      background-image: url(resumeImages/researchTable800X499.jpg); }
+    body #webDesignImage {
+      background-image: url(resumeImages/webDesign800x534.jpg); }
+    body #educationImage {
+      background-image: url(resumeImages/libraryBooks800x601.jpg); }
+    body .bannerImg {
+      height: 60vh; } }
+@media screen and (min-width: 2000px) {
+  body #researchImage {
+    background-image: url(resumeImages/researchTable2405x1500.jpg); }
+  body #webDesignImage {
+    background-image: url(resumeImages/webDesign2247x1500.jpg); }
+  body #educationImage {
+    background-image: url(resumeImages/libraryBooks2400x1802.jpg); } }
 
 /*# sourceMappingURL=resume.css.map */
