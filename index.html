@@ -154,7 +154,8 @@ function openNav(){
     //document.body.style.overflowY = 'scroll';
 }
 
-window.addEventListener('resize', setParallaxImgDist);//every time the window is resized, this listener triggers the funciton to check the location of the image revealing banner
+//window.addEventListener('resize', setParallaxImgDist);//every time the window is resized, this listener triggers the funciton to check the location of the image revealing banner
+resizeCheck = setInterval(setParallaxImgDist, 5);
 parallaxCheck = setInterval(parallax, 5);
 var parallaxWDImgDist = 0;//declare variable outside the scope of any funciton so that it is universal
 var parallaxEdImgDist = 0;
