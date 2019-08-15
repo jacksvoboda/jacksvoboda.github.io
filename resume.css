@@ -164,6 +164,12 @@ body {
         font-size: calc(18px + (6) * (100vw - 768px) / (1920 - 768));
         text-indent: 5vw;
         background-color: #ffffff; }
+        body #mainContentContainer .description .text a {
+          color: #449aa0;
+          font-weight: bold;
+          cursor: pointer; }
+          body #mainContentContainer .description .text a:visited {
+            color: #449aa0; }
       body #mainContentContainer .description .divider {
         width: 2px;
         height: 80%;
