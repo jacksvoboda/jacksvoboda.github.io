@@ -9,7 +9,7 @@ body {
   padding: 0;
   position: relative;
   overflow-x: hidden;
-  font-family: arvo; }
+  font-family: arvo, sans-serif; }
   body #stickyNav {
     width: 10vw;
     height: 8vh;
@@ -49,7 +49,7 @@ body {
       display: flex;
       color: #e0474c;
       transition: 0.5s ease-in-out;
-      font-family: Arvo; }
+      font-family: Arvo, sans-serif; }
       body #introContainer #name h1 {
         margin: auto;
         font-size: calc(40px + (30) * (100vw - 768px) / (1920 - 768));
@@ -97,7 +97,7 @@ body {
       align-items: center;
       justify-content: center;
       transition: 0.5s ease-in-out;
-      font-family: poppins;
+      font-family: poppins, sans-serif;
       font-size: calc(22px + (10) * (100vw - 768px) / (1920 - 768));
       font-weight: normal; }
       body #introContainer #nav .navItem {
@@ -131,6 +131,7 @@ body {
     body #mainContentContainer .titleBar {
       width: 100vw;
       height: 40vh;
+      position: relative;
       display: flex;
       background-image: linear-gradient(20deg, #e0474c30 0 49.9%, #7acfd650 50%);
       box-shadow: 0 0 15px -5px black; }
@@ -154,7 +155,7 @@ body {
       position: relative;
       display: flex;
       background-image: linear-gradient(#f3f3f3 5%, 5%, #fdfdfd 95%, 95%, #f3f3f3 100%);
-      font-family: open sans condensed; }
+      font-family: open sans condensed, sans-serif; }
       body #mainContentContainer .description .text {
         box-sizing: border-box;
         padding: 5vw;
@@ -178,7 +179,7 @@ body {
       display: flex;
       justify-content: space-evenly;
       background-color: white;
-      font-family: open sans condensed; }
+      font-family: open sans condensed, sans-serif; }
       body #mainContentContainer #footer #contactContainer {
         font-size: calc(18px + (5) * (100vw - 768px) / (1920 - 768));
         display: flex;
@@ -189,7 +190,7 @@ body {
           display: flex;
           margin-bottom: 3vh;
           align-items: center;
-          font-family: fjalla one;
+          font-family: fjalla one, sans-serif;
           letter-spacing: 0.1vh; }
           body #mainContentContainer #footer #contactContainer #phoneNumber #iPhoneIcon {
             background-image: url(resumeImages/iPhoneIcon2.svg);
@@ -203,7 +204,7 @@ body {
           display: flex;
           margin-top: 3vh;
           align-items: center;
-          font-family: fjalla one;
+          font-family: fjalla one, sans-serif;
           letter-spacing: 0.1vh; }
           body #mainContentContainer #footer #contactContainer #email #mailIcon {
             background-image: url(resumeImages/mailIcon.svg);
@@ -216,7 +217,7 @@ body {
       body #mainContentContainer #footer #contactForm p {
         margin-bottom: -5vh;
         font-size: calc(22px + (8) * (100vw - 768px) / (1920 - 768));
-        font-family: fjalla one; }
+        font-family: fjalla one, sans-serif; }
       body #mainContentContainer #footer #contactForm form input[type=text] {
         width: 20vw;
         min-width: 250px;
@@ -225,7 +226,7 @@ body {
         border-bottom: 1px solid #c5c5c5;
         padding: 10px;
         margin-top: 10vh;
-        font-family: open sans condensed;
+        font-family: open sans condensed, sans-serif;
         font-size: calc(20px + (10) * (100vw - 768px) / (1920 - 768)); }
         body #mainContentContainer #footer #contactForm form input[type=text]::placeholder {
           color: #b9b9b9;
@@ -241,7 +242,7 @@ body {
         background-color: #80dde4;
         border-radius: 30px;
         font-size: 20px;
-        font-family: open sans condensed;
+        font-family: open sans condensed, sans-serif;
         cursor: pointer; }
         body #mainContentContainer #footer #contactForm form input[type=submit]:focus {
           box-shadow: 0 0 15px -10px black;
@@ -289,6 +290,19 @@ body {
         width: 8vw;
         height: 8vw;
         margin-top: 6vh; }
+    body #mainContentContainer .titleBar #researchImage_mobile {
+      background-image: url(resumeImages/researchTable800x499.jpg); }
+    body #mainContentContainer .titleBar #webDesignImage_mobile {
+      background-image: url(resumeImages/webDesign800x534.jpg); }
+    body #mainContentContainer .titleBar #educationImage_mobile {
+      background-image: url(resumeImages/libraryBooks800x601.jpg); }
+    body #mainContentContainer .titleBar .bannerImg_mobile {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: -100;
+      background-size: cover;
+      background-position: center; }
     body #mainContentContainer .description {
       flex-direction: column; }
       body #mainContentContainer .description .divider {
@@ -313,14 +327,8 @@ body {
         margin-top: 10vh; }
         body #footer #contactForm form input[type=text] {
           padding: 0 !important; }
-    body #researchImage {
-      background-image: url(resumeImages/researchTable800x499.jpg); }
-    body #webDesignImage {
-      background-image: url(resumeImages/webDesign800x534.jpg); }
-    body #educationImage {
-      background-image: url(resumeImages/libraryBooks800x601.jpg); }
     body .bannerImg {
-      height: 60vh; } }
+      display: none; } }
 @media screen and (min-width: 2000px) {
   body #researchImage {
     background-image: url(resumeImages/researchTable2405x1500.jpg); }

@@ -40,10 +40,18 @@
 <!--start main content container-->
 
     <div id='mainContentContainer'>
+        
         <!--the anchor point for the nav links-->
         <a name='researchAnchor'></a>
+
         <!--the transparent title bar that holds the labeling title-->
-        <div id='researchTitleBar' class='titleBar'><h1>Research</h1></div>
+        <!--on large screens, the parallaxed image is absolutely positioned behind the titlebar.
+        On mobile devices/small screens, the image has no parallax and is a child of the title bar-->
+        <div id='researchTitleBar' class='titleBar'>
+            <div class='bannerImg_mobile' id='researchImage_mobile'></div>
+            <h1>Research</h1>
+        </div>
+
         <!--the description section between titles-->
         <div class='description'>
             <div class='text'>
@@ -64,8 +72,14 @@
                 </p>
             </div>
         </div>
+
         <a name='webDesignAnchor'></a>
-        <div id='webDesignTitleBar' class='titleBar'><h1>Web Design</h1></div>
+
+        <div id='webDesignTitleBar' class='titleBar'>
+            <div class='bannerImg_mobile' id='webDesignImage_mobile'></div>
+            <h1>Web Design</h1>
+        </div>
+
         <div class='description'>
             <div class='text'>
                 <h1>Freelance Web Design For...</h1>
@@ -96,8 +110,14 @@
                 </p>
             </div>
         </div>
+
         <a name='educationAnchor'></a>
-        <div id='educationTitleBar' class='titleBar'><h1>Education</h1></div>
+
+        <div id='educationTitleBar' class='titleBar'>
+            <div class='bannerImg_mobile' id='educationImage_mobile'></div>
+            <h1>Education</h1>
+        </div>
+
         <div class='description' id='educationDesc'><!--this one has an ID where the others don't because it needs a unique bottom border to flow better with the visuals in the contact section-->
             <div class='text'>
                 <h1 style='text-indent:0;'>University of Illinois at Urbana-Champaign</h1>
@@ -116,6 +136,9 @@
                 </p>
             </div>
         </div>
+
+        <!--start footer-->
+
         <a name='footerAnchor'></a>
         <div id='footer'>
             <div id='contactContainer'>
@@ -154,8 +177,7 @@ function openNav(){
     //document.body.style.overflowY = 'scroll';
 }
 
-//window.addEventListener('resize', setParallaxImgDist);//every time the window is resized, this listener triggers the funciton to check the location of the image revealing banner
-resizeCheck = setInterval(setParallaxImgDist, 5);
+window.addEventListener('resize', setParallaxImgDist);//every time the window is resized, this listener triggers the funciton to check the location of the image revealing banner
 parallaxCheck = setInterval(parallax, 5);
 var parallaxWDImgDist = 0;//declare variable outside the scope of any funciton so that it is universal
 var parallaxEdImgDist = 0;
